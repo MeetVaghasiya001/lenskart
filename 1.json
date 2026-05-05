@@ -1,0 +1,73 @@
+{
+    "result": [
+        {
+            "promiseType": "next_day",
+            "promiseTypeLabel": "Next day delivery",
+            "promiseTypeImageUrl": "https://static5.lenskart.com/media/uploads/Thunder3x.png",
+            "borderColor": "#BEF5E5",
+            "imageUrl": "https://static5.lenskart.com/media/uploads/New-PLP-Banner-Express-Delivery-generic-3daynext_day_2.png",
+            "pincode": "380001",
+            "deliveryDate": 1778025600000,
+            "dispatchDate": 1778025600000,
+            "codTat": null,
+            "design": {
+                "textColor": "#0A8367",
+                "bgColor": "#F3FFFB",
+                "gradient": [
+                    "#00D4FAF1",
+                    "#D4FAF1"
+                ]
+            },
+            "cutOff": 1777995000,
+            "cutOffPrefixLabel": "Order within",
+            "cutOffTimeLabel": "5h 30mins",
+            "iconUrl": "https://static5.lenskart.com/media/uploads/this_is_a_gif.gif",
+            "textIconUrl": "",
+            "disclaimerNote": "Not applicable for progressive & high power",
+            "disclaimerIcon": "https://static5.lenskart.com/media/uploads/info-circle@3xnew234.png",
+            "disclaimerUrl": null,
+            "benefits": [
+                {
+                    "type": "DYNAMIC_DATE",
+                    "iconUrl": "https://static5.lenskart.com/media/uploads/delivery_truck_speed3.png",
+                    "label": "Get it by May 6, Wednesday",
+                    "subLabel": null,
+                    "tbybLabel": null,
+                    "tbybSubLabel": null,
+                    "imageUrl": null,
+                    "ctaText": null,
+                    "tag": null,
+                    "webUrl": null,
+                    "deeplinkUrl": null,
+                    "disabledClientOrgs": null,
+                    "benefitHeading": "Delivery to doorstep"
+                }
+            ],
+            "groupedBenefits": null,
+            "expressDeliveryDate": null,
+            "expressDispatchDate": null,
+            "deliveryDays": 0,
+            "dispatchDays": 0,
+            "expressDeliveryDays": 0,
+            "expressDispatchDays": 0,
+            "packages": null,
+            "deliveryMessage": "",
+            "threeOrFree": false,
+            "deliveryPromiseType": null,
+            "success": null,
+            "error": null,
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "hto": {
+                "label": "Hurry! You are eligible",
+                "subLabel": "Order now and book a free eye test",
+                "imageUrl": "https://static1.lenskart.com/media/desktop/img/h24/oct/hto/Hto-bottomsheet-info.png",
+                "bannerImageUrl": null,
+                "aspectRatio": "BANNER_4X3",
+                "isServiceable": true
+            },
+            "formattedDeliveryDate": "Get it by May 6, Wednesday"
+        }
+    ],
+    "status": 200
+}
