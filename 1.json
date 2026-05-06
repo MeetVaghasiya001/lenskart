@@ -7,8 +7,8 @@
             "borderColor": "#BEF5E5",
             "imageUrl": "https://static5.lenskart.com/media/uploads/New-PLP-Banner-Express-Delivery-generic-3daynext_day_2.png",
             "pincode": "380001",
-            "deliveryDate": 1778025600000,
-            "dispatchDate": 1778025600000,
+            "deliveryDate": 1778112000000,
+            "dispatchDate": 1778112000000,
             "codTat": null,
             "design": {
                 "textColor": "#0A8367",
@@ -18,9 +18,9 @@
                     "#D4FAF1"
                 ]
             },
-            "cutOff": 1777995000,
+            "cutOff": 1778081400,
             "cutOffPrefixLabel": "Order within",
-            "cutOffTimeLabel": "5h 30mins",
+            "cutOffTimeLabel": "2h 35mins",
             "iconUrl": "https://static5.lenskart.com/media/uploads/this_is_a_gif.gif",
             "textIconUrl": "",
             "disclaimerNote": "Not applicable for progressive & high power",
@@ -30,7 +30,7 @@
                 {
                     "type": "DYNAMIC_DATE",
                     "iconUrl": "https://static5.lenskart.com/media/uploads/delivery_truck_speed3.png",
-                    "label": "Get it by May 6, Wednesday",
+                    "label": "Get it by May 7, Thursday",
                     "subLabel": null,
                     "tbybLabel": null,
                     "tbybSubLabel": null,
@@ -66,7 +66,9 @@
                 "aspectRatio": "BANNER_4X3",
                 "isServiceable": true
             },
-            "formattedDeliveryDate": "Get it by May 6, Wednesday"
+            "formattedDeliveryDate": "Get it by May 7, Thursday",
+            "qcImageUrl": null,
+            "prescriptionType": null
         }
     ],
     "status": 200

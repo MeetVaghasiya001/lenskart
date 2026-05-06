@@ -2,6 +2,7 @@ from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
 
 class Product(BaseModel):
+    url : str
     product_id: int
     brand: Optional[str]
     product_name: Optional[str]

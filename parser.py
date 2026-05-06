@@ -6,7 +6,7 @@ import os
 import gzip
 from model import *
 from db import *
-
+from urllib.parse import urljoin
 
 
 create_db()
@@ -233,6 +233,7 @@ def parser(url):
                 } 
     
     data = {
+        'url':url,
         'product_id': product_id,
         'brand': product_name,
         'product_name': description,
@@ -252,32 +253,80 @@ def parser(url):
         'promis':promis
     }
     vallidate = Product(**data)
-
+    # with open('clean.json','w',encoding='utf-8') as f:
+    #     json.dump(vallidate.model_dump(),f,indent=4,default=str)
+    print(f'{url} was done!!')  
     return vallidate.model_dump() 
 
-data = parser('https://www.lenskart.com/lenskart-la-e15417-n-c28-eyeglasses.html')
-
-row = []
-row.append((
-    data.get('product_id'),
-    data.get('brand'),
-    data.get('product_name'),
-    data.get('model_number'),
-    json.dumps(data.get('gallary')),
-    json.dumps(data.get('price')),
-    data.get('review'),
-    data.get('rating_count'),
-    json.dumps(data.get('customer_reviews')),
-    json.dumps(data.get('custome_review_graph')),
-    json.dumps(data.get('specification')),
-    json.dumps(data.get('similar_products')),
-    json.dumps(data.get('highlight')),
-    json.dumps(data.get('near_by_stores')),
-    json.dumps(data.get('sizes')),
-    json.dumps(data.get('colors')),
-    json.dumps(data.get('promis'))
-
-))
 
 
-insert_in_db(row)
+
+def get_all_links(url):
+    main_url = 'https://www.lenskart.com/'
+    data = page_json(url)
+    with open('clean2.json','w',encoding='utf-8') as f:
+        json.dump(data,f,indent=4,default=str)
+    main_path = data.get('props').get('pageProps').get('data').get('headerData').get('menu1')
+
+    def extract_urls(obj, result=None):
+        if result is None:
+            result = []
+
+        if isinstance(obj, list):
+            for item in obj:
+                extract_urls(item, result)
+
+        elif isinstance(obj, dict):
+            for k, v in obj.items():
+                if k == "url" and isinstance(v, str):
+                    result.append(urljoin(main_url,v))
+                else:
+                    extract_urls(v, result)
+
+        return result
+
+    return extract_urls(main_path)
+
+params = {
+        'page-size': '15',
+        'page': '15',
+    }
+data = request(f'https://api-gateway.juno.lenskart.com/v2/products/category/29361',params)
+
+with open('lense.json','w',encoding='utf-8') as f:
+    json.dump(json.loads(data),f,indent=4,default=str)
+
+
+
+
+
+
+
+
+
+# data = parser('https://www.lenskart.com/aquacolor-dusky-brown-n-candy-pack-color-lenses-2-lens-box-plano.html')
+
+# row = []
+# row.append((
+#     data.get('product_id'),
+#     data.get('brand'),
+#     data.get('product_name'),
+#     data.get('model_number'),
+#     json.dumps(data.get('gallary')),
+#     json.dumps(data.get('price')),
+#     data.get('review'),
+#     data.get('rating_count'),
+#     json.dumps(data.get('customer_reviews')),
+#     json.dumps(data.get('custome_review_graph')),
+#     json.dumps(data.get('specification')),
+#     json.dumps(data.get('similar_products')),
+#     json.dumps(data.get('highlight')),
+#     json.dumps(data.get('near_by_stores')),
+#     json.dumps(data.get('sizes')),
+#     json.dumps(data.get('colors')),
+#     json.dumps(data.get('promis'))
+
+# ))
+
+
+# insert_in_db(row)

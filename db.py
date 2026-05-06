@@ -43,11 +43,39 @@ def create_db():
     conn.commit()
     conn.close()
 
-
-def insert_in_db(data):
+def product_url_db():
     conn,cur = connection()
+    cur.execute("""
+                CREATE TABLE IF NOT EXISTS urls(
+                    u_id INT AUTO_INCREMENT PRIMARY KEY,
+                    url TEXT,
+                    url_status VARCHAR(255) DEFAULT 'pending',
+                    featch_status VARCHAR(255) DEFAULT 'pending'
+                )
+                """)
+    conn.commit()
+    conn.close()
+
+
+def insert_url(data):
+    query="INSERT INTO urls (url,url_status) VALUES (%s,%s)"
+    
+    conn,cur=connection()
+    cur.executemany(query,data)
+    print('10 url was add')
+    conn.commit()
+    cur.close()
+
+
+def insert_in_db(data,status):
+    conn,cur = connection()
+    update_status = "UPDATE urls SET featch_status = %s WHERE url =%s"
     query="INSERT INTO lenskart (product_id,brand,product_name,model_number,gallary,price,review,review_count,customer_reviews,custome_review_graph,specification,similar_products,highlight,near_by_stores,sizes,colors,promis) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
     print('data was add!')
     cur.executemany(query,data)
+    cur.executemany(update_status,status)
     conn.commit()
     conn.close()
+
+
+    

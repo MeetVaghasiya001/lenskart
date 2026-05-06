@@ -1,0 +1,65 @@
+{
+    "result": {
+        "category_name": "All Sunglasses Men Classic",
+        "product_list": [],
+        "num_of_products": 0,
+        "is_ditto_enabled": true,
+        "seo_title": "",
+        "seo_meta_keywords": "",
+        "seo_meta_description": "",
+        "seo_meta_canonical": "",
+        "seo_meta_alternate": "",
+        "display": {
+            "android": "grid",
+            "ios": "",
+            "mobile_site": ""
+        },
+        "description": "",
+        "categoryType": "Sunglasses",
+        "subCategories": "Sunglasses-Gender-All Sunglasses Men",
+        "category_power_urls": [],
+        "cat_img_link": "",
+        "msite_banner_link": "",
+        "breadcrumb": [
+            {
+                "label": "Eyewear",
+                "link": "www.lenskart.com"
+            },
+            {
+                "label": "Sunglasses",
+                "link": "sunglasses.html"
+            },
+            {
+                "label": "Gender",
+                "link": "sunglasses/find-eyewear.html"
+            },
+            {
+                "label": "All Sunglasses Men",
+                "link": "sunglasses/find-eyewear/all-sunglasses-men.html"
+            },
+            {
+                "label": "All Sunglasses Men Classic"
+            }
+        ],
+        "urlKey": "all-sunglasses-men-classic",
+        "urlPath": "sunglasses/find-eyewear/all-sunglasses-men/all-sunglasses-men-classic.html",
+        "category_offer_name": "",
+        "ageGroup": "adult",
+        "categorySubtype": "",
+        "personalisationApplied": false,
+        "parentHashtagList": [],
+        "alternate": {},
+        "is_frame_size_available": true,
+        "inlineFilter": {
+            "ids": []
+        },
+        "aiContext": {
+            "context": "plp",
+            "contextId": 29361,
+            "filters": {}
+        },
+        "isAiFlowEnabled": true
+    },
+    "status": 200,
+    "traceId": "0991777960663655"
+}
